@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Benjamin Cooper</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>About Me</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Me</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <section class="about-container">
+            <div class="about-content">
+                <h2>Who I Am</h2>
+                <p>I’m Benjamin Cooper, an IT student at Starz University. Some of my favorite hobbies include listening to music while studying at night, playing football during the day, and coding. I’m a God-fearing individual who finds joy in worshiping without remorse.</p>
+                <p>Click my photo to learn more!</p>
+            </div>
+            <div class="about-photo">
+                <img src="placeholder.jpg" alt="Benjamin Cooper" class="profile-pic" id="modal-trigger">
+            </div>
+        </section>
+
+        <!-- Modal -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span id="close-modal" class="close-btn">&times;</span>
+                <img src="placeholder.jpg" alt="Benjamin Cooper" class="modal-pic">
+                <h2>More About Me</h2>
+                <p>I am passionate about networking and coding. I dream of working in a world-class tech environment and making a meaningful impact. My favorite sport is football, and I love music for relaxation and inspiration.</p>
+                <p>My values are rooted in faith and perseverance, and I aim to excel in my IT career while inspiring others.</p>
+            </div>
+        </div>
+    </main>
+    <footer style="margin-top: 200px;">
+        <p>© 2024 Benjamin Cooper. All rights reserved.</p>
+    </footer>
+    <script>
+        // Modal functionality
+        const modal = document.getElementById('modal');
+        const modalTrigger = document.getElementById('modal-trigger');
+        const closeModal = document.getElementById('close-modal');
+
+        modalTrigger.addEventListener('click', () => {
+            modal.style.display = 'flex';
+        });
+
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
